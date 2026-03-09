@@ -13,8 +13,8 @@
   --color-contact-rule: #777;
   --color-accent-tan: #af9a77;
   --site-gutter: 24px;
-  --font-sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Lustria", serif;
 
   font-family: var(--font-sans);
 
@@ -34,6 +34,16 @@ body {
   margin: 0;
   background: var(--color-page-bg);
   color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
 }
 
 #root {
@@ -53,8 +63,8 @@ body {
 }
 
 .site-header {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-white);
+  background: var(--color-colonial-blue);
+  border-bottom: 1px solid rgba(243, 239, 230, 0.35);
 }
 
 .site-header__inner,
@@ -71,7 +81,7 @@ body {
 }
 
 .site-brand {
-  color: var(--color-black);
+  color: var(--color-off-white);
   text-decoration: none;
   font-family: var(--font-serif);
   font-size: 3rem;
@@ -81,7 +91,7 @@ body {
 .site-menu-toggle {
   width: 48px;
   height: 48px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-off-white);
   background: transparent;
   display: inline-flex;
   flex-direction: column;
@@ -94,7 +104,7 @@ body {
 .site-menu-toggle span {
   width: 20px;
   height: 1px;
-  background: var(--color-black);
+  background: var(--color-off-white);
 }
 
 .site-nav {
@@ -115,36 +125,37 @@ body {
   opacity: 1;
   transform: translateY(0);
   margin-top: 16px;
-  border-top-color: var(--color-white);
+  border-top-color: rgba(243, 239, 230, 0.35);
 }
 
 .site-nav__link {
   display: block;
-  color: var(--color-black);
+  color: var(--color-off-white);
   text-decoration: none;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   text-align: center;
   padding: 14px 10px;
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid rgba(243, 239, 230, 0.35);
 }
 
 .site-nav__link--active {
-  background: var(--color-accent-tan);
+  background: transparent;
   color: var(--color-white);
+  box-shadow: inset 0 -2px 0 var(--color-white);
 }
 
 .site-nav__cta {
   display: block;
   margin-top: 16px;
-  color: var(--color-black);
+  color: var(--color-off-white);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   text-align: center;
   padding: 12px 10px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-off-white);
 }
 
 .site-footer {
@@ -318,15 +329,19 @@ body {
   display: grid;
   align-content: center;
   padding: clamp(24px, 5vw, 54px);
-  background: var(--color-colonial-blue);
+  background: var(--color-accent-tan);
 }
 
 .about-intro__content p {
   margin: 0;
-  color: var(--color-off-white);
-  font-family: var(--font-serif);
+  color: var(--color-black);
+  font-family: var(--font-sans);
   font-size: clamp(1rem, 1.7vw, 1.28rem);
-  line-height: 1.7;
+  line-height: 2;
+}
+
+.about-intro__content p + p {
+  margin-top: 1em;
 }
 
 .home-card--route {
@@ -704,7 +719,7 @@ body {
 .contact-form button {
   margin-top: 4px;
   border: 1px solid #111;
-  background: var(--color-accent-tan);
+  background: var(--color-colonial-blue);
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.16em;

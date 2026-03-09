@@ -22,7 +22,7 @@ function Home() {
     <section className="home-cards" aria-label="Site sections">
       <div className="about-intro">
         <img
-          src="/lana-headshot.jpg"
+          src="/lana-tc.jpg"
           alt="Lana Johnson"
           className="about-intro__image"
         />
