@@ -1,0 +1,81 @@
+import treatmentImage from "/treatment.jpg";
+import servicesImage from "/services.jpg";
+import hairImage from "/consultations.jpg";
+
+const serviceSections = [
+  {
+    title: "Treatment Focus",
+    image: treatmentImage,
+    rows: [
+      {
+        name: "I am a member of the National Association of Social Workers and have clinical expertise in helping individuals who experience anxiety, depression, and trauma/PTSD.",
+      },
+      {
+        name: "I also treat individuals experiencing ADHD, behavioral issues, bipolar disorder, domestic violence, grief and loss, parenting, and sexual abuse.",
+      },
+      {
+        name: "My preferred treatment approaches include Cognitive Behavioral Therapy (CBT), emotional and mindfulness-based approaches, motivational interviewing, brief solution-focused therapy, crisis intervention, and trauma-focused therapy.",
+      },
+      {
+        name: "I enjoy working with children, adolescents, adults, and families, and I work with clients ages six and older.",
+      },
+    ],
+  },
+  {
+    title: "Consultations",
+    image: hairImage,
+    rows: [
+      { name: "Initial Assessment", price: "$170" },
+      { name: "Ongoing Sessions", price: "$150" },
+    ],
+  },
+];
+
+function Services() {
+  return (
+    <section className="services-page" aria-label="Services">
+      <div className="home-card home-card--static services-hero">
+        <img src={servicesImage} alt="Services" className="home-card__media" />
+        <span className="home-card__label home-card__label--feature">
+          Services
+        </span>
+      </div>
+
+      <div className="services-cards">
+        {serviceSections.map((section) => (
+          <article key={section.title} className="service-card">
+            <img
+              src={section.image}
+              alt=""
+              className="service-card__media"
+              aria-hidden="true"
+            />
+            <div className="service-card__overlay" aria-hidden="true" />
+
+            <div className="service-card__content">
+              <h2 className="service-card__title">{section.title}</h2>
+
+              <dl className="service-card__list">
+                {section.rows.map((row) => (
+                  <div
+                    key={row.name}
+                    className={`service-card__row ${row.price ? "" : "service-card__row--single"}`}
+                  >
+                    <dt>{row.name}</dt>
+                    {row.price ? <dd>{row.price}</dd> : null}
+                  </div>
+                ))}
+              </dl>
+
+              {section.note ? (
+                <p className="service-card__note">{section.note}</p>
+              ) : null}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default Services;
