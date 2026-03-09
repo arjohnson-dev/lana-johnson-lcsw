@@ -334,7 +334,7 @@ h6 {
 
 .about-intro__content p {
   margin: 0;
-  color: var(--color-black);
+  color: var(--color-white);
   font-family: var(--font-sans);
   font-size: clamp(1rem, 1.7vw, 1.28rem);
   line-height: 2;

@@ -16,7 +16,7 @@ function formatPhoneNumber(value) {
 }
 
 function Contact() {
-  const [state, handleSubmit] = useForm("mbdzdjzb");
+  const [state, handleSubmit] = useForm("xjgagpnl");
   const [phone, setPhone] = useState("");
   const isSending = state.submitting;
 
@@ -29,11 +29,15 @@ function Contact() {
         <h1 className="contact-page__title">Contact</h1>
         <div className="contact-page__rule" aria-hidden="true" />
         <p className="contact-page__lead">
-          Please call if you would like to book an appointment. I currently do
-          not accept email appointment requests.
+          I am currently accepting a limited amount of new clients.
         </p>
         <p className="contact-page__lead contact-page__lead--phone">
           Phone: <a href="tel:+15744005724">(574) 400-5724</a>
+          <br />
+          Email:{" "}
+          <a href="mailto:lanajohnsonlcsw@gmail.com">
+            lanajohnsonlcsw@gmail.com
+          </a>
         </p>
       </div>
 

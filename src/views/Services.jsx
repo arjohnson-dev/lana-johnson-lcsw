@@ -1,11 +1,11 @@
-import treatmentImage from "/treatment.jpg";
-import servicesImage from "/services.jpg";
+import expertiseImage from "/services.jpg";
+import servicesImage from "/office.jpg";
 import hairImage from "/consultations.jpg";
 
 const serviceSections = [
   {
-    title: "Treatment Focus",
-    image: treatmentImage,
+    title: "Areas of Expertise",
+    image: expertiseImage,
     rows: [
       {
         name: "I am a member of the National Association of Social Workers and have clinical expertise in helping individuals who experience anxiety, depression, and trauma/PTSD.",
@@ -14,7 +14,7 @@ const serviceSections = [
         name: "I also treat individuals experiencing ADHD, behavioral issues, bipolar disorder, domestic violence, grief and loss, parenting, and sexual abuse.",
       },
       {
-        name: "My preferred treatment approaches include Cognitive Behavioral Therapy (CBT), emotional and mindfulness-based approaches, motivational interviewing, brief solution-focused therapy, crisis intervention, and trauma-focused therapy.",
+        name: "My preferred treatment approaches include Cognitive Behavioral Therapy (CBT), Trauma-Focused Cognitive Behavioral Therapy (TFCBT), Eye Movement Desensitization and Reprocessing (EMDR), emotional and mindfulness-based approaches, motivational interviewing, brief solution-focused therapy, and crisis intervention.",
       },
       {
         name: "I enjoy working with children, adolescents, adults, and families, and I work with clients ages six and older.",
@@ -27,6 +27,9 @@ const serviceSections = [
     rows: [
       { name: "Initial Assessment", price: "$170" },
       { name: "Ongoing Sessions", price: "$150" },
+      {
+        name: "Most insurance plans are accepted. Please contact your insurance provider for details regarding provider in network, coverage, and possible copay.",
+      },
     ],
   },
 ];

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import servicesImage from "/services.jpg";
+import servicesImage from "/office.jpg";
 const contactImage = "/building.jpg";
 
 const routeCards = [
@@ -28,7 +28,7 @@ function Home() {
         />
         <div className="about-intro__content">
           <p>
-            I am a Licensed Clinical Social Worker (LCSW) with over 20 years of
+            I am a Licensed Clinical Social Worker (LCSW) with over 25 years of
             professional experience in the mental health field. I earned my
             Bachelor's degree in Social Work from Western Michigan University
             and my Master's degree in Social Work from Andrews University.
