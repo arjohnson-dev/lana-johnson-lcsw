@@ -6,7 +6,7 @@ function Footer() {
           <div className="site-footer__section">
             <h2 className="site-footer__heading">Contact</h2>
             <p className="site-footer__text">(574) 400-5724</p>
-            <p className="site-footer__text">(574) 293-0005 Ext. XXXX</p>
+            <p className="site-footer__text">(574) 293-0005</p>
             <h2 className="site-footer__heading">Fax</h2>
             <p className="site-footer__text">(574) 293-0019</p>
             <h2 className="site-footer__heading">Address</h2>
