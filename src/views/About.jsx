@@ -15,11 +15,12 @@ function Home() {
             and my Master's degree in Social Work from Andrews University.
           </p>
           <p>
-            After completing my graduate studies, I was employed by the
-            Department of Human Services. I later served as the Director of
-            Youth Programs at Family Services and as the Director of the Elkhart
-            County Women's Shelter. For the past ten years, I have worked at
-            Oaklawn Psychiatric Center.
+            After completing my graduate studies, my experiences have included:
+            Foster Care Specialist with the Department of Human Services,
+            Director of several youth programs with Family Services Bureau,
+            Director of Elkhart County Women's Shelter, and a psychotherapist at
+            Oaklawn Psychiatric Center. Since 2016, I've been in private
+            practice.
           </p>
         </div>
       </div>

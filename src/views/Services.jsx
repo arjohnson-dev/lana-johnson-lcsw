@@ -13,10 +13,10 @@ const serviceSections = [
         name: "I also treat individuals experiencing ADHD, behavioral issues, bipolar disorder, domestic violence, grief and loss, parenting, and sexual abuse.",
       },
       {
-        name: "My preferred treatment approaches include Cognitive Behavioral Therapy (CBT), Trauma-Focused Cognitive Behavioral Therapy (TFCBT), Eye Movement Desensitization and Reprocessing (EMDR), emotional and mindfulness-based approaches, motivational interviewing, brief solution-focused therapy, and crisis intervention.",
+        name: "My preferred treatment approaches include: Cognitive Behavioral Therapy (CBT), Trauma-Focused Cognitive Behavioral Therapy (TF-CBT), Eye Movement Desensitization and Reprocessing (EMDR), emotional and mindfulness-based approaches, motivational interviewing, brief solution-focused therapy, and crisis intervention.",
       },
       {
-        name: "I enjoy working with children, adolescents, adults, and families, and I work with clients ages six and older.",
+        name: "I enjoy working with children, adolescents, adults, and families. I prefer working with clients age six and older.",
       },
     ],
   },
