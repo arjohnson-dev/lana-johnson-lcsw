@@ -1,11 +1,10 @@
-import expertiseImage from "/services.jpg";
 import servicesImage from "/office.jpg";
-import hairImage from "/consultations.jpg";
+import expertiseImage from "/consultations.jpg";
 
 const serviceSections = [
   {
     title: "Areas of Expertise",
-    image: expertiseImage,
+    image: servicesImage,
     rows: [
       {
         name: "I am a member of the National Association of Social Workers and have clinical expertise in helping individuals who experience anxiety, depression, and trauma/PTSD.",
@@ -23,7 +22,7 @@ const serviceSections = [
   },
   {
     title: "Consultations",
-    image: hairImage,
+    image: expertiseImage,
     rows: [
       { name: "Initial Assessment", price: "$170" },
       { name: "Ongoing Sessions", price: "$150" },
@@ -37,13 +36,6 @@ const serviceSections = [
 function Services() {
   return (
     <section className="services-page" aria-label="Services">
-      <div className="home-card home-card--static services-hero">
-        <img src={servicesImage} alt="Services" className="home-card__media" />
-        <span className="home-card__label home-card__label--feature">
-          Services
-        </span>
-      </div>
-
       <div className="services-cards">
         {serviceSections.map((section) => (
           <article key={section.title} className="service-card">

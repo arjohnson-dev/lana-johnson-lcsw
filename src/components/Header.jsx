@@ -1,21 +1,54 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const getNavLinkClass = ({ isActive }) =>
-    isActive ? "site-nav__link site-nav__link--active" : "site-nav__link";
-
   const closeMenu = () => setIsMenuOpen(false);
+
+  const isMobileViewport = () =>
+    window.matchMedia("(max-width: 759px)").matches;
+
+  const scrollToSectionOnMobile = (event, sectionId) => {
+    if (!isMobileViewport()) {
+      closeMenu();
+      return;
+    }
+
+    event.preventDefault();
+    closeMenu();
+
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      return;
+    }
+
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const mobileSectionSpacing = 18;
+    const scrollTop =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      mobileSectionSpacing;
+
+    window.history.replaceState(null, "", `/#${sectionId}`);
+    window.scrollTo({ top: scrollTop, behavior: "smooth" });
+  };
+
+  const goToTop = (event) => {
+    event.preventDefault();
+    closeMenu();
+    window.history.replaceState(null, "", "/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
         <div className="site-header__bar">
-          <NavLink to="/" end className="site-brand">
+          <a href="/" className="site-brand" onClick={goToTop}>
             Lana Johnson, LCSW
-          </NavLink>
+          </a>
 
           <button
             type="button"
@@ -36,24 +69,24 @@ function Header() {
           className={`site-nav ${isMenuOpen ? "site-nav--open" : ""}`}
           aria-label="Main navigation"
         >
-          <NavLink to="/" end className={getNavLinkClass} onClick={closeMenu}>
+          <a href="/" className="site-nav__link" onClick={goToTop}>
             About
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={getNavLinkClass}
-            onClick={closeMenu}
+          </a>
+          <a
+            href="#services"
+            className="site-nav__link"
+            onClick={(event) => scrollToSectionOnMobile(event, "services")}
           >
             Services
-          </NavLink>
+          </a>
 
-          <NavLink
-            to="/contact"
-            className={getNavLinkClass}
-            onClick={closeMenu}
+          <a
+            href="#contact"
+            className="site-nav__link"
+            onClick={(event) => scrollToSectionOnMobile(event, "contact")}
           >
             CONTACT
-          </NavLink>
+          </a>
         </nav>
       </div>
     </header>

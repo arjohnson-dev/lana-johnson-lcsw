@@ -46,7 +46,15 @@ function Footer() {
         <div className="site-footer__bottom">
           <p className="site-footer__copy">
             &copy; {new Date().getFullYear()} Lana Johnson, LCSW. All Rights
-            Reserved.
+            Reserved. |{" "}
+            <a
+              className="site-footer__credit-link"
+              href="https://arjohnson.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Developed by arjohnson.dev
+            </a>
           </p>
         </div>
       </div>

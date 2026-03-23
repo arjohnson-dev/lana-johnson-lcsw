@@ -22,7 +22,7 @@ function Contact() {
 
   return (
     <section className="contact-page" aria-label="Contact">
-      <div className="home-card home-card--static services-hero">
+      <div className="home-card home-card--static contact-hero">
         <img src="/building.jpg" alt="Contact" className="home-card__media" />
       </div>
       <div className="contact-page__intro">

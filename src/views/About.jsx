@@ -1,22 +1,3 @@
-import { Link } from "react-router-dom";
-import servicesImage from "/office.jpg";
-const contactImage = "/building.jpg";
-
-const routeCards = [
-  {
-    title: "Services",
-    to: "/services",
-    media: servicesImage,
-    labelClass: "home-card__label--feature",
-  },
-  {
-    title: "CONTACT",
-    to: "/contact",
-    media: contactImage,
-    labelClass: "home-card__label--feature",
-  },
-];
-
 function Home() {
   return (
     <section className="home-cards" aria-label="Site sections">
@@ -42,21 +23,6 @@ function Home() {
           </p>
         </div>
       </div>
-
-      {routeCards.map((card) => (
-        <Link key={card.to} to={card.to} className="home-card home-card--route">
-          <img
-            src={card.media}
-            alt={`${card.title} preview`}
-            className="home-card__media"
-          />
-          <span
-            className={`home-card__label ${card.labelClass ? card.labelClass : ""}`}
-          >
-            {card.title}
-          </span>
-        </Link>
-      ))}
     </section>
   );
 }
